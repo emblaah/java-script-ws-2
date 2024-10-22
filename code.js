@@ -1,4 +1,5 @@
 // 1. Arrays
+
 // Arrays allow us to store lists of data in a collection.
 //
 // Start by having a read through this for a refresher => https://www.w3schools.com/js/js_arrays.asp
@@ -16,9 +17,10 @@
 const newYearsResolutions = ["Get fit", "Get rich", "Travel"];
 const nextNewYearsResolution = newYearsResolutions[0];
 
-console.log(newYearsResolutions[0]);
+console.log(newYearsResolutions[2]);
 
 // 2. More Arrays
+
 // Here's an array which the next few tasks will build upon. Don't change it here!
 const months = [
   "Jon",
@@ -78,6 +80,7 @@ months.splice(6, 1);
 console.log(months);
 
 // 3. Iteration
+
 // You can iterate over items in an array using forEach. To use forEach,
 // you define a function which will be invoked once for every element in
 // the array. When the function is invoked, it will receive the item from
@@ -96,21 +99,17 @@ const printDogName = (dogName) => {
 // Task 1: Pass the printDogName function into a .forEach call on the `dogs` array, to
 // make it print "The {dogName} barks." for each item in the array.
 
-dogs.forEach((dogBreed) => {
-  printDogName(dogBreed);
-});
+dogs.forEach(printDogName);
 
 // Task 2: Create a new function called `printDogNameUppercase` which works similarly
 // to the `printDogName` function but makes the string uppercase. (See https://www.w3schools.com/jsref/jsref_touppercase.asp
 // for how to make a string uppercase). Use .forEach to run the function for each
 // dog in the dogs array.
 const printDogNameUppercase = (dogUpper) => {
-  console.log(dogUpper.toUpperCase());
+  console.log(`The ${dogUpper} barks.`.toUpperCase());
 };
 
-dogs.forEach((dogBreedUpper) => {
-  printDogNameUppercase(dogBreedUpper);
-});
+dogs.forEach(printDogNameUppercase);
 
 // Task 3: Write a forEach function which uses an anonymous function instead of defining a
 // named function like the examples above (hint; the lecture material used anonymous functions)
@@ -120,6 +119,7 @@ dogs.forEach((breedName) => {
 });
 
 // 4. Maps
+
 // The last examples used forEach to iterate over an array. .forEach() invoked
 // a function for each item in an array, but doesn't actually return anything.
 
@@ -147,7 +147,8 @@ const shoutyDogNames = dogs.map((shoutName) => {
 });
 console.log(shoutyDogNames);
 
-// 5.
+// 5. Objects
+
 // Objects allow you to store data and functions. Unlike arrays,
 // they are not ordered, and so do not use indexes at all for
 // retrieving or modifying their values. Instead they use keys and values
@@ -205,6 +206,7 @@ const dogsTypes = {
 console.log(dogsTypes.labrador.puppy.name);
 
 // 6. Array Objects
+
 // This task pulls together the previous two tasks to practice a more "real" data
 // structure you'd see regularly as a web developer.
 //
@@ -226,7 +228,7 @@ products.forEach((product) => {
 // Task 2: Use .map() to iterate over the products and return the model from
 // each product. Assign the result to a variable called `models` and use console.log()
 // to print it.
-const models = products.map((modelName) => {
-  return modelName.model;
+const models = products.map((product) => {
+  return product.model;
 });
 console.log(models);

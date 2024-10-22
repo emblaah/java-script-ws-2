@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class classPerson {
+        constructor(studentAt, name, age) {
+          this.studentAt = studentAt;
+          this.name = name;
+          this.age = age;
+        }
+        greeting() {
+          console.log(
+            `My name is ${this.name}, I am ${this.age} and a student at ${this.studentAt}`
+          );
+        }
+      }
+
+      const person = {
+        studentAt: "Chas Academy",
+        name: "Embla",
+        age: 27,
+      };
+      let person1 = new classPerson(person.studentAt, person.name, person.age);
+      person1.greeting();
+
+      class classDog {
+        constructor(name) {
+          this.name = name;
+        }
+        barking() {
+          console.log(`The dog ${this.name} barks a lot.`);
+        }
+      }
+
+      const dogsTypes = {
+        labrador: {
+          adult: {
+            name: "Marley",
+          },
+          puppy: {
+            name: "Buster",
+          },
+        },
+      };
+
+      let dogName = new classDog(dogsTypes.labrador.adult.name);
+      dogName.barking();
+    </script>
+  </body>
+</html>
