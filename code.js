@@ -1,7 +1,6 @@
 // 1. Arrays
 
 // Arrays allow us to store lists of data in a collection.
-//
 // Start by having a read through this for a refresher => https://www.w3schools.com/js/js_arrays.asp
 
 // Task 1: Create a variable called `newYearsResolutions` and set it's value to be a new array with at
@@ -209,7 +208,6 @@ console.log(dogsTypes.labrador.puppy.name);
 
 // This task pulls together the previous two tasks to practice a more "real" data
 // structure you'd see regularly as a web developer.
-//
 // Consider the following array of product objects:
 const products = [
   { name: "Camera", brand: "Canon", model: "EOS 70D" },
